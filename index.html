@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Project</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="w-75 mx-auto my-5">
+        <h1 class="text-center">CRUD System</h1>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control  border-0 border-bottom rounded-0 border-black" id="productName"
+                placeholder="Product Name">
+            <label for="productName">Product Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control  border-0 border-bottom rounded-0 border-black" id="productPrice"
+                placeholder="Product Price">
+            <label for="productPrice">Product Price</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input list="categoryList" type="text" class="form-control  border-0 border-bottom rounded-0 border-black"
+                id="productCategory" placeholder="Product Category">
+            <label for="productCategory">Product Category</label>
+            <datalist id="categoryList">
+                <option value="TV"></option>
+                <option value="Mobiles"></option>
+                <option value="Laptops"></option>
+                <option value="Screens"></option>
+            </datalist>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="file" class="form-control  border-0 border-bottom rounded-0 border-black" id="productimg"
+                placeholder="Product img">
+            <label for="productimg">Product img</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control  border-0 border-bottom rounded-0 border-black" id="productdesc"
+                placeholder="Product desc"></textarea>
+            <label for="productdesc">Product description </label>
+        </div>
+
+        <button onclick="addProduct()" class="btn btn-primary d-block ms-auto ">Add Product</button>
+    </div>
+    <div class="table-responsive w-75 mx-auto">
+        <table class="table text-center align-middle ">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
