@@ -44,8 +44,25 @@
             <label for="productdesc">Product description </label>
         </div>
 
-        <button onclick="addProduct()" class="btn btn-primary d-block ms-auto ">Add Product</button>
+        <button id="addBtn" onclick="addProduct()" class="btn btn-primary d-block ms-auto ">Add Product</button>
+        <button id="updateBtn" onclick="updateProduct()" class="btn btn-primary d-none ms-auto ">Update Product</button>
     </div>
+    <div class="dropdown w-25 mx-auto">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Choose search type ...
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" onclick="setSearchType('name')">Name</a></li>
+            <li><a class="dropdown-item" href="#" onclick="setSearchType('price')">Price</a></li>
+            <li><a class="dropdown-item" href="#" onclick="setSearchType('category')">Category</a></li>
+        </ul>
+    </div>
+    <div class="form-floating mb-3 w-25 mx-auto">
+        <input oninput="search()" type="text" class="form-control  border-0 border-bottom rounded-0 border-black"
+            id="productSearch" placeholder="Product Search">
+        <label for="productSearch">Product Search</label>
+    </div>
+
     <div class="table-responsive w-75 mx-auto">
         <table class="table text-center align-middle ">
             <thead>
